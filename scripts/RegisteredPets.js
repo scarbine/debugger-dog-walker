@@ -1,20 +1,20 @@
 import { getPets } from "./database.js"
 
-// document.addEventListener(
-//     "click",
-//     (clickEvent) => {
-//         const itemClicked = clickEvent.target
-//         if (itemClicked.id.startsWith("pets")) {
-//             const [,petId] = itemClicked.id.split("--")
+document.addEventListener(
+    "click",
+    (clickEvent) => {
+        const itemClicked = clickEvent.target
+        if (itemClicked.id.startsWith("pets")) {
+            const [,petId] = itemClicked.id.split("--")
 
-//             for (const pet of pets) {
-//                 if (pet.id === parseInt(petId)) {
-//                     window.alert(`${pet.name} live in ${pet.city}`)
-//                 }
-//             }
-//         }
-//     }
-// )
+            for (const pet of pets) {
+                if (pet.id === parseInt(petId)) {
+                    window.alert(`${pet.name} is a dope pet!`)
+                }
+            }
+        }
+    }
+)
 
 const pets = getPets()
 
